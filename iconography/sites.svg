@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="400px" height="401px" viewBox="0 0 400 401" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.1 (8751) - http://www.bohemiancoding.com/sketch -->
+    <title>sites</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="Sites" sketch:type="MSLayerGroup" transform="translate(62.000000, 34.000000)" stroke="#2F5D9B">
+            <path d="M276.598935,91.9085824 C276.598935,59.3742707 249.601944,33 216.299468,33 C182.996991,33 156,59.3742707 156,91.9085824 C156,102.775032 159.098367,112.441074 163.53901,121.701725 L216.977874,228.597715 L271.042531,118.01079 C275.582703,109.73373 276.598935,101.956049 276.598935,91.9085824 Z" id="Oval-23" stroke-width="14" sketch:type="MSShapeGroup"></path>
+            <ellipse id="Oval-23" stroke-width="9" sketch:type="MSShapeGroup" cx="216.299468" cy="91.1334694" rx="26.1826636" ry="25.5787266"></ellipse>
+            <path d="M155.598935,183.609725 C155.598935,151.075413 128.601944,124.701142 95.2994677,124.701142 C61.9969913,124.701142 35,151.075413 35,183.609725 C35,194.476175 38.098367,204.142216 42.5390103,213.402868 L95.977874,320.298858 L150.042531,209.711933 C154.582703,201.434872 155.598935,193.657191 155.598935,183.609725 Z" id="Oval-24" stroke-width="14" sketch:type="MSShapeGroup"></path>
+            <ellipse id="Oval-24" stroke-width="9" sketch:type="MSShapeGroup" cx="95.2994677" cy="182.834612" rx="26.1826636" ry="25.5787266"></ellipse>
+            <path d="M96.2675094,124.43579 C102.659538,111.361171 115.443596,85.2119329 115.443596,85.2119329 C119.983768,76.9348725 121,69.157191 121,59.1097248 C121,26.5754131 94.0030087,0.201142446 60.7005323,0.201142446 C27.3980558,0.201142446 0.401064555,26.5754131 0.401064555,59.1097248 C0.401064555,69.9761748 3.49943152,79.6422162 7.9400749,88.9028677 C7.9400749,88.9028677 30.6248431,134.280157 41.9672272,156.968801" id="Oval-24" stroke-width="14" sketch:type="MSShapeGroup"></path>
+            <ellipse id="Oval-24" stroke-width="9" sketch:type="MSShapeGroup" cx="60.7005323" cy="58.3346119" rx="26.1826636" ry="25.5787266"></ellipse>
+        </g>
+    </g>
+</svg>

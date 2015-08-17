@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="400px" height="401px" viewBox="0 0 400 401" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.1 (8751) - http://www.bohemiancoding.com/sketch -->
+    <title>atmospheric-model</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="Atmospheric-Models" sketch:type="MSLayerGroup" transform="translate(26.000000, 121.000000)" stroke="#2F5D9B" stroke-width="20">
+            <path d="M22.3211054,52.6161574 C8.62927428,63.9948207 -0.0955107528,81.1956409 -0.0955107528,100.442624 C-0.0955107528,134.700918 27.5459441,162.476656 61.6386152,162.476656 C95.7312863,162.476656 123.372741,134.700918 123.372741,100.442624 C123.372741,96.2430656 122.95737,92.1409217 122.165662,88.1754162 C111.61152,95.5763939 99.2886352,99.8350306 86.1110516,99.8350306 C58.0230489,99.8350306 33.7533472,80.5555413 22.3211054,52.6161574 Z" id="Fill-77" sketch:type="MSShapeGroup"></path>
+            <path d="M339.519615,39.8412176 C339.519615,98.6198755 294.273645,146.269167 238.465996,146.269167 C192.957656,146.269167 154.497295,114.577024 141.841799,71.0077774 C128.862199,88.8234325 109.642308,100.153279 88.1485433,100.153279 C49.0656971,100.153279 17.3755124,62.8260136 17.3755124,16.7805641 C17.3755124,15.4638962 20.178057,7.49823449 28.2982572,3.55826213 C36.4184573,-0.381710231 319.441369,-1.11561118 328.022638,3.55826216 C336.603906,8.2321355 339.519615,30.5053374 339.519615,39.8412176 Z" id="Stroke-83" sketch:type="MSShapeGroup"></path>
+        </g>
+    </g>
+</svg>

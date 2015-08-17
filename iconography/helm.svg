@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="400px" height="400px" viewBox="0 0 400 400" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.1 (8751) - http://www.bohemiancoding.com/sketch -->
+    <title>helm</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="Helm" sketch:type="MSLayerGroup" transform="translate(42.000000, 23.000000)">
+            <circle id="Oval-6" stroke="#2F5D9B" stroke-width="20" sketch:type="MSShapeGroup" cx="156.465152" cy="178.476718" r="120"></circle>
+            <circle id="Oval-7" stroke="#D8232A" stroke-width="9" sketch:type="MSShapeGroup" cx="156.465152" cy="178.476718" r="25.6482446"></circle>
+            <path d="M156.5,326.803055 L156.5,358.001587" id="Line-2" stroke="#2E5D9B" stroke-width="20" stroke-linecap="round" sketch:type="MSShapeGroup"></path>
+            <path d="M156.5,0.803055048 L156.5,32.0015869" id="Line-3" stroke="#2E5D9B" stroke-width="20" stroke-linecap="round" sketch:type="MSShapeGroup"></path>
+            <path d="M151.769531,138.541016 L162.207031,138.541016 L166.5,78.803055 L146.5,78.803055 L151.769531,138.541016 Z" id="Line-3" fill="#2E5D9B" sketch:type="MSShapeGroup"></path>
+            <path d="M151.269531,277.541016 L161.707031,277.541016 L166,217.803055 L146,217.803055 L151.269531,277.541016 Z" id="Line-4" fill="#2E5D9B" sketch:type="MSShapeGroup" transform="translate(156.000000, 247.672035) rotate(-180.000000) translate(-156.000000, -247.672035) "></path>
+            <path d="M15.3378592,245.303055 L15.3378592,276.501587" id="Line-2" stroke="#2E5D9B" stroke-width="20" stroke-linecap="round" sketch:type="MSShapeGroup" transform="translate(15.337859, 261.000000) rotate(-300.000000) translate(-15.337859, -261.000000) "></path>
+            <path d="M297.662141,82.303055 L297.662141,113.501587" id="Line-3" stroke="#2E5D9B" stroke-width="20" stroke-linecap="round" sketch:type="MSShapeGroup" transform="translate(297.662141, 98.000000) rotate(-300.000000) translate(-297.662141, -98.000000) "></path>
+            <path d="M213.108348,173.954998 L223.545848,173.954998 L227.838817,114.217037 L207.838817,114.217037 L213.108348,173.954998 Z" id="Line-3" fill="#2E5D9B" sketch:type="MSShapeGroup" transform="translate(217.838817, 144.086018) rotate(-300.000000) translate(-217.838817, -144.086018) "></path>
+            <path d="M92.4808167,243.021985 L102.918317,243.021985 L107.211285,183.284025 L87.2112855,183.284025 L92.4808167,243.021985 Z" id="Line-4" fill="#2E5D9B" sketch:type="MSShapeGroup" transform="translate(97.211285, 213.153005) rotate(-120.000000) translate(-97.211285, -213.153005) "></path>
+            <path d="M297.662141,245.303055 L297.662141,276.501587" id="Line-2" stroke="#2E5D9B" stroke-width="20" stroke-linecap="round" sketch:type="MSShapeGroup" transform="translate(297.662141, 261.000000) rotate(-60.000000) translate(-297.662141, -261.000000) "></path>
+            <path d="M15.3378592,82.303055 L15.3378592,113.501587" id="Line-3" stroke="#2E5D9B" stroke-width="20" stroke-linecap="round" sketch:type="MSShapeGroup" transform="translate(15.337859, 98.000000) rotate(-60.000000) translate(-15.337859, -98.000000) "></path>
+            <path d="M90.4307147,173.954998 L100.868215,173.954998 L105.161183,114.217037 L85.1611834,114.217037 L90.4307147,173.954998 Z" id="Line-3" fill="#2E5D9B" sketch:type="MSShapeGroup" transform="translate(95.161183, 144.086018) rotate(-60.000000) translate(-95.161183, -144.086018) "></path>
+            <path d="M210.558246,243.888011 L220.995746,243.888011 L225.288715,184.15005 L205.288715,184.15005 L210.558246,243.888011 Z" id="Line-4" fill="#2E5D9B" sketch:type="MSShapeGroup" transform="translate(215.288715, 214.019030) rotate(-240.000000) translate(-215.288715, -214.019030) "></path>
+        </g>
+    </g>
+</svg>

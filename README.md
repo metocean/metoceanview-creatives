@@ -1,2 +1,3 @@
-# metoceanview-creatives
-MetOceanView Creatives
+# MetOceanView Creatives
+
+Iconography, branding and imagery for MetOceanView.

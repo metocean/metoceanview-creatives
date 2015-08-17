@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="400px" height="400px" viewBox="0 0 400 400" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.1 (8751) - http://www.bohemiancoding.com/sketch -->
+    <title>views</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="Views" sketch:type="MSLayerGroup" transform="translate(47.000000, 39.000000)" stroke="#2F5D9B">
+            <circle id="Oval-4" stroke-width="26" sketch:type="MSShapeGroup" cx="160" cy="160" r="160"></circle>
+            <rect id="Rectangle-10" stroke-width="12" sketch:type="MSShapeGroup" x="65" y="90" width="190" height="140" rx="17"></rect>
+            <path d="M63.832336,196.664453 L80.103761,179.00278 L108.056132,167.852135 L128.44916,183.875813 L153.852403,180.734959 L180.895687,160 L205.432841,168.149021 L225.50646,184.7849 L256.167664,178.798031" id="Path-99" stroke-width="8" sketch:type="MSShapeGroup"></path>
+            <path d="M64,178.5 L80.1716309,155.942408 L107.929321,140.913549 L128.376671,170.371058 L154.18013,165.71136 L179.99482,144.097197 L206.692123,155.942408 L227.765366,170.371058 L257.695679,170.371058" id="Path-100" stroke-width="8" stroke-linecap="square" stroke-dasharray="12,15" sketch:type="MSShapeGroup"></path>
+        </g>
+    </g>
+</svg>

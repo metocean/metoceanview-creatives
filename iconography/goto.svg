@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="400px" height="400px" viewBox="0 0 400 400" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.1 (8751) - http://www.bohemiancoding.com/sketch -->
+    <title>goto</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="Goto" sketch:type="MSLayerGroup" transform="translate(39.000000, 35.000000)">
+            <path d="M161.5,241.210421 L161.5,320.001587" id="Line" stroke="#2E5D9B" stroke-width="20" stroke-linecap="square" sketch:type="MSShapeGroup"></path>
+            <path d="M161.001978,0.298924097 L161.001978,81.0247269" id="Line-2" stroke="#2E5D9B" stroke-width="20" stroke-linecap="square" sketch:type="MSShapeGroup"></path>
+            <path d="M318.644773,162.726813 L239.883993,162.726813" id="Line-3" stroke="#2E5D9B" stroke-width="20" stroke-linecap="square" sketch:type="MSShapeGroup"></path>
+            <path d="M77.0004883,162.726813 L0.420584427,162.726813" id="Line-4" stroke="#2E5D9B" stroke-width="20" stroke-linecap="square" sketch:type="MSShapeGroup"></path>
+            <g id="Red-Cross" transform="translate(128.000000, 128.000000)" stroke="#D8232A" stroke-width="12" stroke-linecap="square" sketch:type="MSShapeGroup">
+                <path d="M32.801187,1.8048192 L32.801187,64.7102147" id="Line-2"></path>
+                <path d="M62.7219694,33.6360879 L1.17858163,33.6360879" id="Line-4"></path>
+            </g>
+            <circle id="Oval-6" stroke="#2F5D9B" stroke-width="20" sketch:type="MSShapeGroup" cx="159.465152" cy="161.476718" r="120"></circle>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,14 @@
+{
+  "name": "metoceanview-creatives",
+  "version": "1.0.0",
+  "description": "MetOceanView Creatives",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/metocean/metoceanview-creatives.git"
+  },
+  "author": "MetOcean Solutions Ltd",
+  "bugs": {
+    "url": "https://github.com/metocean/metoceanview-creatives/issues"
+  },
+  "homepage": "https://github.com/metocean/metoceanview-creatives#readme"
+}
