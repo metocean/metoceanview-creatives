@@ -5,17 +5,16 @@
     <desc>Created with Sketch.</desc>
     <defs></defs>
     <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
-        <g id="Review" sketch:type="MSLayerGroup" transform="translate(68.000000, 50.000000)">
-            <path d="M181.502899,35.0143433 L0.999999523,35.0143433" id="Line-2" stroke="#2F5D9B" stroke-width="20" stroke-linecap="square" sketch:type="MSShapeGroup"></path>
-            <path d="M181.502899,93.0143433 L0.999999523,93.0143433" id="Line-3" stroke="#2F5D9B" stroke-width="20" stroke-linecap="square" sketch:type="MSShapeGroup"></path>
-            <path d="M181.502899,151.014343 L0.999999523,151.014343" id="Line-4" stroke="#2F5D9B" stroke-width="20" stroke-linecap="square" sketch:type="MSShapeGroup"></path>
-            <rect id="Rectangle-16" stroke="#2F5D9B" stroke-width="9" sketch:type="MSShapeGroup" x="233" y="133" width="32" height="32"></rect>
-            <path d="M181.502899,209.014343 L0.999999523,209.014343" id="Line-5" stroke="#2F5D9B" stroke-width="20" stroke-linecap="square" sketch:type="MSShapeGroup"></path>
-            <rect id="Rectangle-17" stroke="#2F5D9B" stroke-width="9" sketch:type="MSShapeGroup" x="233" y="192" width="32" height="32"></rect>
-            <path d="M181.502899,267.014343 L0.999999523,267.014343" id="Line-6" stroke="#2F5D9B" stroke-width="20" stroke-linecap="square" sketch:type="MSShapeGroup"></path>
-            <rect id="Rectangle-18" stroke="#2F5D9B" stroke-width="9" sketch:type="MSShapeGroup" x="233" y="250" width="32" height="32"></rect>
-            <path d="M235.943381,21.4441229 L251.946052,37.0706626 L288.602251,0.0338831816" id="Path-1" stroke="#D8232A" stroke-width="15" sketch:type="MSShapeGroup"></path>
-            <path d="M233.943381,81.4441229 L249.946052,97.0706626 L286.602251,60.0338832" id="Path-2" stroke="#D8232A" stroke-width="15" sketch:type="MSShapeGroup"></path>
+        <g id="Review" sketch:type="MSLayerGroup" transform="translate(74.000000, 72.000000)">
+            <g id="Group" fill="#2F5D9B" sketch:type="MSShapeGroup">
+                <path d="M10.1453033,-0.237711589 L0.145303328,-0.237711589 L0.145303328,19.7622884 L10.1453033,19.7622884 L232.387949,19.7622884 L242.387949,19.7622884 L242.387949,-0.237711589 L232.387949,-0.237711589 L10.1453033,-0.237711589 Z" id="Line-2"></path>
+                <path d="M10.1453033,57.7622884 L0.145303328,57.7622884 L0.145303328,77.7622884 L10.1453033,77.7622884 L232.387949,77.7622884 L242.387949,77.7622884 L242.387949,57.7622884 L232.387949,57.7622884 L10.1453033,57.7622884 Z" id="Line-3"></path>
+                <path d="M10.1453033,115.762288 L0.145303328,115.762288 L0.145303328,135.762288 L10.1453033,135.762288 L232.387949,135.762288 L242.387949,135.762288 L242.387949,115.762288 L232.387949,115.762288 L10.1453033,115.762288 Z" id="Line-4"></path>
+                <path d="M10.1453033,173.762288 L0.145303328,173.762288 L0.145303328,193.762288 L10.1453033,193.762288 L157.94726,193.762288 L167.655267,173.762288 L10.1453033,173.762288 Z" id="Line-5"></path>
+                <path d="M10.1453033,231.762288 L0.145303328,231.762288 L0.145303328,251.762288 L10.1453033,251.762288 L162.333978,251.762288 L157.301752,231.762288 L10.1453033,231.762288 Z" id="Line-6"></path>
+            </g>
+            <path d="M177.230484,221.251934 L198.631385,242.149823 L247.652932,192.619313" id="Path" stroke="#D8232A" stroke-width="20" sketch:type="MSShapeGroup"></path>
+            <circle id="Oval-30" stroke="#2F5D9B" stroke-width="9" sketch:type="MSShapeGroup" cx="215" cy="216" r="60.640625"></circle>
         </g>
     </g>
 </svg>
