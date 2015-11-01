@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="400px" height="400px" viewBox="0 0 400 400" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.1 (8751) - http://www.bohemiancoding.com/sketch -->
+    <title>beta</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="Beta" sketch:type="MSLayerGroup" transform="translate(39.000000, 41.000000)">
+            <circle id="Oval-3" stroke="#2F5D9B" stroke-width="26" sketch:type="MSShapeGroup" cx="160" cy="160" r="160"></circle>
+            <text id="β" sketch:type="MSTextLayer" font-family="Times" font-size="224.666667" font-weight="normal" sketch:alignment="middle" fill="#D8222A">
+                <tspan x="97.5255534" y="224.684211">β</tspan>
+            </text>
+        </g>
+    </g>
+</svg>
