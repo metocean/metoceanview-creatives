@@ -1,14 +1,27 @@
 {
   "name": "metoceanview-creatives",
-  "version": "1.7.0",
-  "description": "MetOceanView Creatives",
+  "version": "0.1.0",
+  "description": "Metoceanview front end toolkit",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "js": "browserify index.js > dist.js"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/metocean/metoceanview-creatives.git"
   },
-  "author": "MetOcean Solutions Ltd",
+  "author": "Thomas Coats <github@voodoolabs.net>",
   "bugs": {
     "url": "https://github.com/metocean/metoceanview-creatives/issues"
   },
-  "homepage": "https://github.com/metocean/metoceanview-creatives#readme"
+  "homepage": "https://github.com/metocean/metoceanview-creatives#readme",
+  "dependencies": {
+  },
+  "devDependencies": {
+    "odo-relay": "^2.4.0",
+    "odojs": "^4.4.0",
+    "odoql": "^7.10.0",
+    "odoql-exe": "^1.6.2"
+  }
 }
