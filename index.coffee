@@ -7,17 +7,22 @@ component.use odoql
 hub = hub()
 exe = exe hub: hub
 
+select = require './selector'
+
 router = component
   render: (state, params, hub) ->
+
     dom '#root', [
-      dom 'div', 'test component'
+      select state, params.siteDataSetSelector, hub.new
+        update: (m, cb) ->
+          hub.emit 'update', siteDataSetSelector: m.autocomplete
+          cb()
     ]
 
 root = document.querySelector '#root'
 scene = relay root, router, exe, hub: hub
 
 hub.every 'update', (p, cb) ->
-  console.log p?.autocomplete
   scene.update p
   cb()
 

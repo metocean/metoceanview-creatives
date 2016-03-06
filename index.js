@@ -1,5 +1,5 @@
 (function() {
-  var component, dom, exe, hub, odoql, relay, root, router, scene, _ref;
+  var component, dom, exe, hub, odoql, relay, root, router, scene, select, _ref;
 
   _ref = require('odojs'), component = _ref.component, hub = _ref.hub, dom = _ref.dom;
 
@@ -17,9 +17,20 @@
     hub: hub
   });
 
+  select = require('./selector');
+
   router = component({
     render: function(state, params, hub) {
-      return dom('#root', [dom('div', 'test component')]);
+      return dom('#root', [
+        select(state, params.siteDataSetSelector, hub["new"]({
+          update: function(m, cb) {
+            hub.emit('update', {
+              siteDataSetSelector: m.autocomplete
+            });
+            return cb();
+          }
+        }))
+      ]);
     }
   });
 
@@ -30,7 +41,6 @@
   });
 
   hub.every('update', function(p, cb) {
-    console.log(p != null ? p.autocomplete : void 0);
     scene.update(p);
     return cb();
   });
