@@ -15,7 +15,7 @@ fillerItems = [
 
 module.exports = (state, params, hub) ->
   params ?= {}
-  params.value ?= ''
+  params.value ?= params.default ?= ''
   params.isopen ?= no
   params.selectedindex ?= null
   params.allItems = params.allItems ? fillerItems

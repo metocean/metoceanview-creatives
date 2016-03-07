@@ -25,6 +25,7 @@ selectorDefaultParams =
     'Transformers'
     'Transmission'
   ]
+  default: 'Shared Services'
 router = component
   render: (state, params, hub) ->
     params.exampleSelectorParams ?= selectorDefaultParams

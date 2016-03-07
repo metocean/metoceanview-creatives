@@ -14,7 +14,7 @@
       params = {};
     }
     if (params.value == null) {
-      params.value = '';
+      params.value = params["default"] != null ? params["default"] : params["default"] = '';
     }
     if (params.isopen == null) {
       params.isopen = false;
@@ -87,11 +87,15 @@
   selector = require('./components/selector');
 
   selectorDefaultParams = {
-    allItems: ['Buildings', 'Shared Services', 'Control Systems', 'High Voltage', 'Other', 'Fluid Exchanger', 'Protection System', 'Steam Plant', 'Steam Turbines', 'Geo Wells', 'Therm Generators', 'Transformers', 'Transmission']
+    allItems: ['Buildings', 'Shared Services', 'Control Systems', 'High Voltage', 'Other', 'Fluid Exchanger', 'Protection System', 'Steam Plant', 'Steam Turbines', 'Geo Wells', 'Therm Generators', 'Transformers', 'Transmission'],
+    "default": 'Shared Services'
   };
 
   router = component({
     render: function(state, params, hub) {
+      if (params.exampleSelectorParams == null) {
+        params.exampleSelectorParams = selectorDefaultParams;
+      }
       return dom('#root.metoceanview-creatives-page.grid', [
         dom('div.example.selector-example', [
           dom('div', 'Selector component: '), selector(state, params.exampleSelectorParams, hub["new"]({

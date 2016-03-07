@@ -13,7 +13,7 @@
       params = {};
     }
     if (params.value == null) {
-      params.value = '';
+      params.value = params["default"] != null ? params["default"] : params["default"] = '';
     }
     if (params.isopen == null) {
       params.isopen = false;
