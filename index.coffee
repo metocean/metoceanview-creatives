@@ -7,7 +7,7 @@ component.use odoql
 hub = hub()
 exe = exe hub: hub
 
-selector = require './selector'
+selector = require './components/selector'
 
 router = component
   render: (state, params, hub) ->

@@ -17,7 +17,7 @@
     hub: hub
   });
 
-  selector = require('./selector');
+  selector = require('./components/selector');
 
   router = component({
     render: function(state, params, hub) {
