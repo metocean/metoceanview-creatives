@@ -45,19 +45,21 @@
     }));
     isopen = params.isopen && params.items.length > 0;
     return dom(".metoceanview-selector" + (isopen ? '.open' : ''), [
-      dom('div.selector-input-wrapper', [dom('input', helper.inputparams)]), isopen ? dom('ul', params.items.map(function(item, index) {
-        var description, isselected, linkparams;
-        description = dom('span', item);
-        if (params.items.length !== items.length) {
-          description = [dom('span.underline', item.substr(0, params.value.length)), dom('span', item.substr(params.value.length))];
-        }
-        isselected = index === params.selectedindex;
-        linkparams = helper.linkparams(item, index);
-        linkparams.attributes = {
-          href: '#'
-        };
-        return dom("" + (isselected ? 'li.selected' : 'li'), dom('.item', linkparams, description));
-      })) : void 0
+      dom('div.selector-input-wrapper', [dom('input', helper.inputparams)]), isopen ? dom('div.list-container', [
+        dom('ul', params.items.map(function(item, index) {
+          var description, isselected, linkparams;
+          description = dom('span', item);
+          if (params.items.length !== items.length) {
+            description = [dom('span.underline', item.substr(0, params.value.length)), dom('span', item.substr(params.value.length))];
+          }
+          isselected = index === params.selectedindex;
+          linkparams = helper.linkparams(item, index);
+          linkparams.attributes = {
+            href: '#'
+          };
+          return dom("" + (isselected ? 'li.selected' : 'li'), dom('.item', linkparams, description));
+        }))
+      ]) : void 0
     ]);
   };
 

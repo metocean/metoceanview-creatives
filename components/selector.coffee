@@ -40,15 +40,17 @@ module.exports = (state, params, hub) ->
       dom 'input', helper.inputparams
     ]
     if isopen
-      dom 'ul', params.items.map (item, index) ->
-        description = dom 'span', item
-        if params.items.length isnt items.length
-          description = [
-            dom 'span.underline', item.substr 0, params.value.length
-            dom 'span', item.substr params.value.length
-          ]
-        isselected = index is params.selectedindex
-        linkparams = helper.linkparams item, index
-        linkparams.attributes = href: '#'
-        dom "#{if isselected then 'li.selected' else 'li'}", dom '.item', linkparams, description
+      dom 'div.list-container', [
+        dom 'ul', params.items.map (item, index) ->
+          description = dom 'span', item
+          if params.items.length isnt items.length
+            description = [
+              dom 'span.underline', item.substr 0, params.value.length
+              dom 'span', item.substr params.value.length
+            ]
+          isselected = index is params.selectedindex
+          linkparams = helper.linkparams item, index
+          linkparams.attributes = href: '#'
+          dom "#{if isselected then 'li.selected' else 'li'}", dom '.item', linkparams, description
+      ]
   ]
