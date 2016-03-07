@@ -1,5 +1,5 @@
 (function() {
-  var component, dom, exe, hub, odoql, relay, root, router, scene, select, _ref;
+  var component, dom, exe, hub, odoql, relay, root, router, scene, selector, _ref;
 
   _ref = require('odojs'), component = _ref.component, hub = _ref.hub, dom = _ref.dom;
 
@@ -17,19 +17,21 @@
     hub: hub
   });
 
-  select = require('./selector');
+  selector = require('./selector');
 
   router = component({
     render: function(state, params, hub) {
-      return dom('#root', [
-        select(state, params.siteDataSetSelector, hub["new"]({
-          update: function(m, cb) {
-            hub.emit('update', {
-              siteDataSetSelector: m.autocomplete
-            });
-            return cb();
-          }
-        }))
+      return dom('#root.metoceanview-creatives-page.grid', [
+        dom('div.example.selector-example', [
+          dom('div', 'Selector component: '), selector(state, params.siteDataSetSelector, hub["new"]({
+            update: function(m, cb) {
+              hub.emit('update', {
+                siteDataSetSelector: m.autocomplete
+              });
+              return cb();
+            }
+          }))
+        ]), dom('div.example', 'need component here'), dom('div.example', 'need component here'), dom('div.example', 'need component here'), dom('div.example', 'need component here')
       ]);
     }
   });

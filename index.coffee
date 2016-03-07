@@ -7,16 +7,23 @@ component.use odoql
 hub = hub()
 exe = exe hub: hub
 
-select = require './selector'
+selector = require './selector'
 
 router = component
   render: (state, params, hub) ->
 
-    dom '#root', [
-      select state, params.siteDataSetSelector, hub.new
-        update: (m, cb) ->
-          hub.emit 'update', siteDataSetSelector: m.autocomplete
-          cb()
+    dom '#root.metoceanview-creatives-page.grid', [
+      dom 'div.example.selector-example', [
+        dom 'div', 'Selector component: '
+        selector state, params.siteDataSetSelector, hub.new
+          update: (m, cb) ->
+            hub.emit 'update', siteDataSetSelector: m.autocomplete
+            cb()
+      ]
+      dom 'div.example', 'need component here'
+      dom 'div.example', 'need component here'
+      dom 'div.example', 'need component here'
+      dom 'div.example', 'need component here'
     ]
 
 root = document.querySelector '#root'

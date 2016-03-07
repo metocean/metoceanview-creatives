@@ -18,6 +18,7 @@
   },
   "homepage": "https://github.com/metocean/metoceanview-creatives#readme",
   "dependencies": {
+    "flexy-grid": "^0.3.0",
     "odojs-autocomplete": "^0.1.0"
   },
   "devDependencies": {
