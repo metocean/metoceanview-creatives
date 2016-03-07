@@ -2,19 +2,15 @@
 autoCompleteHelper = require 'odojs-autocomplete'
 
 items = [
-  'Buildings'
-  'Shared Services'
-  'Control Systems'
-  'High Voltage'
-  'Other'
-  'Fluid Exchanger'
-  'Protection System'
-  'Steam Plant'
-  'Steam Turbines'
-  'Geo Wells'
-  'Therm Generators'
-  'Transformers'
-  'Transmission'
+  'You'
+  'Need'
+  'To'
+  'Pass'
+  'In'
+  'Your'
+  'Items'
+  'Through'
+  'Params'
 ]
 
 module.exports = (state, params, hub) ->

@@ -6,11 +6,10 @@
 
   autoCompleteHelper = require('odojs-autocomplete');
 
-  items = ['Buildings', 'Shared Services', 'Control Systems', 'High Voltage', 'Other', 'Fluid Exchanger', 'Protection System', 'Steam Plant', 'Steam Turbines', 'Geo Wells', 'Therm Generators', 'Transformers', 'Transmission'];
+  items = ['You', 'Need', 'To', 'Pass', 'In', 'Your', 'Items', 'Through', 'Params'];
 
   module.exports = function(state, params, hub) {
     var helper, isopen;
-    console.log(params);
     if (params == null) {
       params = {};
     }
@@ -38,7 +37,6 @@
             p.selectedindex = 0;
           }
         }
-        console.log(p);
         hub.emit('update', {
           autocomplete: p
         });
@@ -89,7 +87,6 @@
 
   router = component({
     render: function(state, params, hub) {
-      console.log(params.siteDataSetSelector);
       return dom('#root.metoceanview-creatives-page.grid', [
         dom('div.example.selector-example', [
           dom('div', 'Selector component: '), selector(state, params.siteDataSetSelector, hub["new"]({
