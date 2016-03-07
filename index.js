@@ -1,5 +1,5 @@
 (function() {
-  var component, dom, exe, hub, odoql, relay, root, router, scene, selector, _ref;
+  var component, dom, exe, hub, odoql, relay, root, router, scene, selector, selectorDefaultParams, _ref;
 
   _ref = require('odojs'), component = _ref.component, hub = _ref.hub, dom = _ref.dom;
 
@@ -19,14 +19,21 @@
 
   selector = require('./components/selector');
 
+  selectorDefaultParams = {
+    allItems: ['Buildings', 'Shared Services', 'Control Systems', 'High Voltage', 'Other', 'Fluid Exchanger', 'Protection System', 'Steam Plant', 'Steam Turbines', 'Geo Wells', 'Therm Generators', 'Transformers', 'Transmission']
+  };
+
   router = component({
     render: function(state, params, hub) {
+      if (params.exampleSelectorParams == null) {
+        params.exampleSelectorParams = selectorDefaultParams;
+      }
       return dom('#root.metoceanview-creatives-page.grid', [
         dom('div.example.selector-example', [
-          dom('div', 'Selector component: '), selector(state, params.siteDataSetSelector, hub["new"]({
+          dom('div', 'Selector component: '), selector(state, params.exampleSelectorParams, hub["new"]({
             update: function(m, cb) {
               hub.emit('update', {
-                siteDataSetSelector: m.autocomplete
+                exampleSelectorParams: m.autocomplete
               });
               return cb();
             }

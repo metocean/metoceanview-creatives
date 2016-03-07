@@ -1,14 +1,14 @@
 (function() {
-  var autoCompleteHelper, component, dom, items, _ref;
+  var autoCompleteHelper, component, dom, fillerItems, _ref;
 
   _ref = require('odojs'), component = _ref.component, dom = _ref.dom;
 
   autoCompleteHelper = require('odojs-autocomplete');
 
-  items = ['You', 'Need', 'To', 'Pass', 'In', 'Your', 'Items', 'Through', 'Params'];
+  fillerItems = ['You', 'Need', 'To', 'Pass', 'In', 'Your', 'Items', 'Through', 'Params'];
 
   module.exports = function(state, params, hub) {
-    var helper, isopen;
+    var helper, isopen, _ref1;
     if (params == null) {
       params = {};
     }
@@ -21,17 +21,18 @@
     if (params.selectedindex == null) {
       params.selectedindex = null;
     }
+    params.allItems = (_ref1 = params.allItems) != null ? _ref1 : fillerItems;
     if (params.items == null) {
-      params.items = items;
+      params.items = fillerItems;
     }
     helper = autoCompleteHelper(state, params, hub.child({
       update: function(p, cb) {
-        p.items = items.filter(function(item) {
+        p.items = params.allItems.filter(function(item) {
           return item.toLowerCase().indexOf(p.value.toLowerCase()) === 0;
         });
         if (p.items.length === 1) {
           if (p.items[0] === p.value) {
-            p.items = items;
+            p.items = params.allItems;
           } else if (p.isopen && (p.selectedindex == null)) {
             p.selectedindex = 0;
           }
@@ -49,7 +50,7 @@
         dom('ul', params.items.map(function(item, index) {
           var description, isselected, linkparams;
           description = dom('span', item);
-          if (params.items.length !== items.length) {
+          if (params.items.length !== params.allItems.length) {
             description = [dom('span.underline', item.substr(0, params.value.length)), dom('span', item.substr(params.value.length))];
           }
           isselected = index === params.selectedindex;

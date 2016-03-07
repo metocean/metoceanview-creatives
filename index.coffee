@@ -9,14 +9,31 @@ exe = exe hub: hub
 
 selector = require './components/selector'
 
+selectorDefaultParams =
+  allItems: [
+    'Buildings'
+    'Shared Services'
+    'Control Systems'
+    'High Voltage'
+    'Other'
+    'Fluid Exchanger'
+    'Protection System'
+    'Steam Plant'
+    'Steam Turbines'
+    'Geo Wells'
+    'Therm Generators'
+    'Transformers'
+    'Transmission'
+  ]
 router = component
   render: (state, params, hub) ->
+    params.exampleSelectorParams ?= selectorDefaultParams
     dom '#root.metoceanview-creatives-page.grid', [
       dom 'div.example.selector-example', [
         dom 'div', 'Selector component: '
-        selector state, params.siteDataSetSelector, hub.new
+        selector state, params.exampleSelectorParams, hub.new
           update: (m, cb) ->
-            hub.emit 'update', siteDataSetSelector: m.autocomplete
+            hub.emit 'update', exampleSelectorParams: m.autocomplete
             cb()
       ]
       dom 'div.example', 'need component here'

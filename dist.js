@@ -1,15 +1,15 @@
 (function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({1:[function(require,module,exports){
 (function() {
-  var autoCompleteHelper, component, dom, items, _ref;
+  var autoCompleteHelper, component, dom, fillerItems, _ref;
 
   _ref = require('odojs'), component = _ref.component, dom = _ref.dom;
 
   autoCompleteHelper = require('odojs-autocomplete');
 
-  items = ['You', 'Need', 'To', 'Pass', 'In', 'Your', 'Items', 'Through', 'Params'];
+  fillerItems = ['You', 'Need', 'To', 'Pass', 'In', 'Your', 'Items', 'Through', 'Params'];
 
   module.exports = function(state, params, hub) {
-    var helper, isopen;
+    var helper, isopen, _ref1;
     if (params == null) {
       params = {};
     }
@@ -22,17 +22,18 @@
     if (params.selectedindex == null) {
       params.selectedindex = null;
     }
+    params.allItems = (_ref1 = params.allItems) != null ? _ref1 : fillerItems;
     if (params.items == null) {
-      params.items = items;
+      params.items = fillerItems;
     }
     helper = autoCompleteHelper(state, params, hub.child({
       update: function(p, cb) {
-        p.items = items.filter(function(item) {
+        p.items = params.allItems.filter(function(item) {
           return item.toLowerCase().indexOf(p.value.toLowerCase()) === 0;
         });
         if (p.items.length === 1) {
           if (p.items[0] === p.value) {
-            p.items = items;
+            p.items = params.allItems;
           } else if (p.isopen && (p.selectedindex == null)) {
             p.selectedindex = 0;
           }
@@ -50,7 +51,7 @@
         dom('ul', params.items.map(function(item, index) {
           var description, isselected, linkparams;
           description = dom('span', item);
-          if (params.items.length !== items.length) {
+          if (params.items.length !== params.allItems.length) {
             description = [dom('span.underline', item.substr(0, params.value.length)), dom('span', item.substr(params.value.length))];
           }
           isselected = index === params.selectedindex;
@@ -65,7 +66,7 @@
 
 },{"odojs":26,"odojs-autocomplete":19}],2:[function(require,module,exports){
 (function() {
-  var component, dom, exe, hub, odoql, relay, root, router, scene, selector, _ref;
+  var component, dom, exe, hub, odoql, relay, root, router, scene, selector, selectorDefaultParams, _ref;
 
   _ref = require('odojs'), component = _ref.component, hub = _ref.hub, dom = _ref.dom;
 
@@ -85,14 +86,18 @@
 
   selector = require('./components/selector');
 
+  selectorDefaultParams = {
+    allItems: ['Buildings', 'Shared Services', 'Control Systems', 'High Voltage', 'Other', 'Fluid Exchanger', 'Protection System', 'Steam Plant', 'Steam Turbines', 'Geo Wells', 'Therm Generators', 'Transformers', 'Transmission']
+  };
+
   router = component({
     render: function(state, params, hub) {
       return dom('#root.metoceanview-creatives-page.grid', [
         dom('div.example.selector-example', [
-          dom('div', 'Selector component: '), selector(state, params.siteDataSetSelector, hub["new"]({
+          dom('div', 'Selector component: '), selector(state, params.exampleSelectorParams, hub["new"]({
             update: function(m, cb) {
               hub.emit('update', {
-                siteDataSetSelector: m.autocomplete
+                exampleSelectorParams: m.autocomplete
               });
               return cb();
             }
