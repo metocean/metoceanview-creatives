@@ -36,7 +36,9 @@ module.exports = (state, params, hub) ->
       cb()
   isopen = params.isopen and params.items.length > 0
   dom ".metoceanview-selector#{if isopen then '.open' else ''}", [
-    dom 'input', helper.inputparams
+    dom 'div.selector-input-wrapper', [
+      dom 'input', helper.inputparams
+    ]
     if isopen
       dom 'ul', params.items.map (item, index) ->
         description = dom 'span', item
@@ -48,5 +50,5 @@ module.exports = (state, params, hub) ->
         isselected = index is params.selectedindex
         linkparams = helper.linkparams item, index
         linkparams.attributes = href: '#'
-        dom "#{if isselected then 'li.selected' else 'li'}", dom 'a', linkparams, description
+        dom "#{if isselected then 'li.selected' else 'li'}", dom '.item', linkparams, description
   ]

@@ -44,7 +44,7 @@
     }));
     isopen = params.isopen && params.items.length > 0;
     return dom(".metoceanview-selector" + (isopen ? '.open' : ''), [
-      dom('input', helper.inputparams), isopen ? dom('ul', params.items.map(function(item, index) {
+      dom('div.selector-input-wrapper', [dom('input', helper.inputparams)]), isopen ? dom('ul', params.items.map(function(item, index) {
         var description, isselected, linkparams;
         description = dom('span', item);
         if (params.items.length !== items.length) {
@@ -55,7 +55,7 @@
         linkparams.attributes = {
           href: '#'
         };
-        return dom("" + (isselected ? 'li.selected' : 'li'), dom('a', linkparams, description));
+        return dom("" + (isselected ? 'li.selected' : 'li'), dom('.item', linkparams, description));
       })) : void 0
     ]);
   };

@@ -1,0 +1,21 @@
+.metoceanview-selector {
+  width: 250px;
+}
+.metoceanview-selector input {
+  width: 100%;
+}
+.metoceanview-selector ul {
+  margin-top: 0;
+  padding: 5px;
+  border-left: 1px solid #000;
+  border-right: 1px solid #000;
+  border-bottom: 1px solid #000;
+}
+.metoceanview-selector li {
+  list-style-type: none;
+  text-align: left;
+  cursor: pointer;
+}
+.metoceanview-selector .selected {
+  background-color: #9cf;
+}
