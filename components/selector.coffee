@@ -50,7 +50,6 @@ module.exports = (state, params, hub) ->
             ]
           isselected = index is params.selectedindex
           linkparams = helper.linkparams item, index
-          linkparams.attributes = href: '#'
           dom "#{if isselected then 'li.selected' else 'li'}", dom '.item', linkparams, description
       ]
   ]

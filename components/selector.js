@@ -53,9 +53,6 @@
           }
           isselected = index === params.selectedindex;
           linkparams = helper.linkparams(item, index);
-          linkparams.attributes = {
-            href: '#'
-          };
           return dom("" + (isselected ? 'li.selected' : 'li'), dom('.item', linkparams, description));
         }))
       ]) : void 0
