@@ -36,6 +36,7 @@ module.exports = (state, params, hub) ->
   dom ".metoceanview-selector#{if isopen then '.open' else ''}", [
     dom 'div.selector-input-wrapper', [
       dom 'input', helper.inputparams
+      dom '.selector-arrow', ''
     ]
     if isopen
       dom 'div.list-container', [
