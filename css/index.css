@@ -124,13 +124,17 @@ html,
   width: 100%;
   margin-top: 0;
   background-color: #fff;
-  padding: 5px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-left: 0;
   border-left: 1px solid #000;
   border-right: 1px solid #000;
   border-bottom: 1px solid #000;
   position: absolute;
 }
 .metoceanview-selector li {
+  padding-left: 5px;
+  padding-right: 5px;
   list-style-type: none;
   text-align: left;
   cursor: pointer;
