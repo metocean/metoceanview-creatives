@@ -11,7 +11,6 @@ selector = require './components/selector'
 
 router = component
   render: (state, params, hub) ->
-
     dom '#root.metoceanview-creatives-page.grid', [
       dom 'div.example.selector-example', [
         dom 'div', 'Selector component: '

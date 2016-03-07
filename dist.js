@@ -10,6 +10,7 @@
 
   module.exports = function(state, params, hub) {
     var helper, isopen;
+    console.log(params);
     if (params == null) {
       params = {};
     }
@@ -37,6 +38,7 @@
             p.selectedindex = 0;
           }
         }
+        console.log(p);
         hub.emit('update', {
           autocomplete: p
         });
@@ -44,6 +46,7 @@
       }
     }));
     isopen = params.isopen && params.items.length > 0;
+    helper.inputparams.value = params.value;
     return dom(".metoceanview-selector" + (isopen ? '.open' : ''), [
       dom('div.selector-input-wrapper', [dom('input', helper.inputparams)]), isopen ? dom('div.list-container', [
         dom('ul', params.items.map(function(item, index) {
@@ -54,9 +57,6 @@
           }
           isselected = index === params.selectedindex;
           linkparams = helper.linkparams(item, index);
-          linkparams.attributes = {
-            href: '#'
-          };
           return dom("" + (isselected ? 'li.selected' : 'li'), dom('.item', linkparams, description));
         }))
       ]) : void 0
@@ -89,6 +89,7 @@
 
   router = component({
     render: function(state, params, hub) {
+      console.log(params.siteDataSetSelector);
       return dom('#root.metoceanview-creatives-page.grid', [
         dom('div.example.selector-example', [
           dom('div', 'Selector component: '), selector(state, params.siteDataSetSelector, hub["new"]({

@@ -43,6 +43,7 @@
       }
     }));
     isopen = params.isopen && params.items.length > 0;
+    helper.inputparams.value = params.value;
     return dom(".metoceanview-selector" + (isopen ? '.open' : ''), [
       dom('div.selector-input-wrapper', [dom('input', helper.inputparams)]), isopen ? dom('div.list-container', [
         dom('ul', params.items.map(function(item, index) {

@@ -35,6 +35,7 @@ module.exports = (state, params, hub) ->
       hub.emit 'update', autocomplete: p
       cb()
   isopen = params.isopen and params.items.length > 0
+  helper.inputparams.value = params.value
   dom ".metoceanview-selector#{if isopen then '.open' else ''}", [
     dom 'div.selector-input-wrapper', [
       dom 'input', helper.inputparams
