@@ -1,6 +1,6 @@
 {
   "name": "metoceanview-creatives",
-  "version": "0.1.0",
+  "version": "1.7.0",
   "description": "Metoceanview front end toolkit",
   "main": "api.js",
   "scripts": {
