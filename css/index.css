@@ -111,7 +111,7 @@ html,
   flex: 0 0 0px;
 }
 .metoceanview-selector {
-  width: 250px;
+  width: 100%;
 }
 .metoceanview-selector input {
   width: 100%;

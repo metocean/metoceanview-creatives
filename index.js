@@ -31,14 +31,16 @@
       }
       return dom('#root.metoceanview-creatives-page.grid', [
         dom('div.example.selector-example', [
-          dom('div', 'Selector component: '), selector(state, params.exampleSelectorParams, hub["new"]({
-            update: function(m, cb) {
-              hub.emit('update', {
-                exampleSelectorParams: m.autocomplete
-              });
-              return cb();
-            }
-          }))
+          dom('div', 'Selector component: '), dom('div.selector-container', [
+            selector(state, params.exampleSelectorParams, hub["new"]({
+              update: function(m, cb) {
+                hub.emit('update', {
+                  exampleSelectorParams: m.autocomplete
+                });
+                return cb();
+              }
+            }))
+          ])
         ]), dom('div.example', 'need component here'), dom('div.example', 'need component here'), dom('div.example', 'need component here'), dom('div.example', 'need component here')
       ]);
     }
