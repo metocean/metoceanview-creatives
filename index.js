@@ -1,5 +1,5 @@
 (function() {
-  var component, dom, exe, hub, odoql, relay, root, router, scene, selector, selectorDefaultParams, _ref;
+  var component, dom, exe, hub, odoql, relay, root, router, scene, select, selector, selectorDefaultParams, _ref;
 
   _ref = require('odojs'), component = _ref.component, hub = _ref.hub, dom = _ref.dom;
 
@@ -18,6 +18,8 @@
   });
 
   selector = require('./components/selector');
+
+  select = require('./components/select');
 
   selectorDefaultParams = {
     allItems: ['Buildings', 'Shared Services', 'Control Systems', 'High Voltage', 'Other', 'Fluid Exchanger', 'Protection System', 'Steam Plant', 'Steam Turbines', 'Geo Wells', 'Therm Generators', 'Transformers', 'Transmission'],
@@ -41,7 +43,14 @@
               }
             }))
           ])
-        ]), dom('div.example', 'need component here'), dom('div.example', 'need component here'), dom('div.example', 'need component here'), dom('div.example', 'need component here')
+        ]), dom('div.example', [
+          select(state, params, hub["new"]({
+            update: function(p, cb) {
+              console.log(p);
+              return cb();
+            }
+          }))
+        ]), dom('div.example', 'need component here'), dom('div.example', 'need component here'), dom('div.example', 'need component here')
       ]);
     }
   });

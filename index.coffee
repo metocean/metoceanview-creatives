@@ -8,6 +8,7 @@ hub = hub()
 exe = exe hub: hub
 
 selector = require './components/selector'
+select = require './components/select'
 
 selectorDefaultParams =
   allItems: [
@@ -39,7 +40,12 @@ router = component
               cb()
         ]
       ]
-      dom 'div.example', 'need component here'
+      dom 'div.example', [
+        select state, params, hub.new
+          update: (p, cb) ->
+            console.log p
+            cb()
+      ]
       dom 'div.example', 'need component here'
       dom 'div.example', 'need component here'
       dom 'div.example', 'need component here'
