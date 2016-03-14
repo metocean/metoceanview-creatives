@@ -45,7 +45,7 @@ router = component
   render: (state, params, hub) ->
     params.exampleSelectorParams ?= selectorDefaultParams
     selectParams =
-      options: selectOptions
+      items: selectOptions
       defaultValue: 'Therm Generators'
     hubForSelect = hub.new()
     hubForSelect.every 'selected value: {value}', (p, cb) ->

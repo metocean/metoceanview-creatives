@@ -42,7 +42,7 @@
         params.exampleSelectorParams = selectorDefaultParams;
       }
       selectParams = {
-        options: selectOptions,
+        items: selectOptions,
         defaultValue: 'Therm Generators'
       };
       hubForSelect = hub["new"]();

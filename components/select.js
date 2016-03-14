@@ -23,7 +23,7 @@
   module.exports = widget({
     afterMount: function(el, state, params, hub) {
       var change, items, _ref1, _ref2;
-      items = (_ref1 = params.options) != null ? _ref1 : defaultItems;
+      items = (_ref1 = params.items) != null ? _ref1 : defaultItems;
       defaultValue = (_ref2 = params.defaultValue) != null ? _ref2 : defaultValue;
       change = function(value) {
         return hub.emit('selected value: {value}', {

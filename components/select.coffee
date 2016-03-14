@@ -21,7 +21,7 @@ defaultValue = 'first'
 
 module.exports = widget
   afterMount: (el, state, params, hub) ->
-    items = params.options ? defaultItems
+    items = params.items ? defaultItems
     defaultValue = params.defaultValue ? defaultValue
     change = (value) ->
       hub.emit 'selected value: {value}', value: value
