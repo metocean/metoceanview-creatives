@@ -1,5 +1,6 @@
 #how to use:
-#param.options where options is an array of json objects containing value and label properties
+#params.items where items is an array of json objects containing value and label properties
+#params.defaultValue is the default selected item
 #once a value is selected then 'selected value: {value}' will be emitted
 
 {dom, widget} = require 'odojs'
