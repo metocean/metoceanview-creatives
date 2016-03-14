@@ -28,9 +28,16 @@
 
   router = component({
     render: function(state, params, hub) {
+      var hubForSelect;
       if (params.exampleSelectorParams == null) {
         params.exampleSelectorParams = selectorDefaultParams;
       }
+      hubForSelect = hub["new"]();
+      hubForSelect.every('selected value: {value}', function(p, cb) {
+        console.log('inside the hub every');
+        console.log(p);
+        return cb();
+      });
       return dom('#root.metoceanview-creatives-page.grid', [
         dom('div.example.selector-example', [
           dom('div', 'Selector component: '), dom('div.selector-container', [
@@ -43,14 +50,7 @@
               }
             }))
           ])
-        ]), dom('div.example', [
-          select(state, params, hub["new"]({
-            update: function(p, cb) {
-              console.log(p);
-              return cb();
-            }
-          }))
-        ]), dom('div.example', 'need component here'), dom('div.example', 'need component here'), dom('div.example', 'need component here')
+        ]), dom('div.example', [select(state, params, hubForSelect)]), dom('div.example', 'need component here'), dom('div.example', 'need component here'), dom('div.example', 'need component here')
       ]);
     }
   });

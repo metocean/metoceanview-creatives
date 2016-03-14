@@ -1,6 +1,6 @@
 (function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({1:[function(require,module,exports){
 (function() {
-  var change, dom, options, react, reactDOM, reactSelect, valueAndLabel, widget, _ref;
+  var dom, options, react, reactDOM, reactSelect, valueAndLabel, widget, _ref;
 
   _ref = require('odojs'), dom = _ref.dom, widget = _ref.widget;
 
@@ -19,12 +19,14 @@
 
   options = [valueAndLabel('first', 'first'), valueAndLabel('second', 'second'), valueAndLabel('third', 'third')];
 
-  change = function() {
-    return console.log('onchange');
-  };
-
   module.exports = widget({
     afterMount: function(el, state, params, hub) {
+      var change;
+      change = function(value) {
+        return hub.emit('selected value: {value}', {
+          value: value
+        });
+      };
       return reactDOM.render(react.createElement(reactSelect, {
         name: 'select-name',
         value: 'first',
@@ -136,9 +138,16 @@
 
   router = component({
     render: function(state, params, hub) {
+      var hubForSelect;
       if (params.exampleSelectorParams == null) {
         params.exampleSelectorParams = selectorDefaultParams;
       }
+      hubForSelect = hub["new"]();
+      hubForSelect.every('selected value: {value}', function(p, cb) {
+        console.log('inside the hub every');
+        console.log(p);
+        return cb();
+      });
       return dom('#root.metoceanview-creatives-page.grid', [
         dom('div.example.selector-example', [
           dom('div', 'Selector component: '), dom('div.selector-container', [
@@ -151,14 +160,7 @@
               }
             }))
           ])
-        ]), dom('div.example', [
-          select(state, params, hub["new"]({
-            update: function(p, cb) {
-              console.log(p);
-              return cb();
-            }
-          }))
-        ]), dom('div.example', 'need component here'), dom('div.example', 'need component here'), dom('div.example', 'need component here')
+        ]), dom('div.example', [select(state, params, hubForSelect)]), dom('div.example', 'need component here'), dom('div.example', 'need component here'), dom('div.example', 'need component here')
       ]);
     }
   });

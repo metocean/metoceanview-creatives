@@ -1,5 +1,5 @@
 (function() {
-  var change, dom, options, react, reactDOM, reactSelect, valueAndLabel, widget, _ref;
+  var dom, options, react, reactDOM, reactSelect, valueAndLabel, widget, _ref;
 
   _ref = require('odojs'), dom = _ref.dom, widget = _ref.widget;
 
@@ -18,12 +18,14 @@
 
   options = [valueAndLabel('first', 'first'), valueAndLabel('second', 'second'), valueAndLabel('third', 'third')];
 
-  change = function() {
-    return console.log('onchange');
-  };
-
   module.exports = widget({
     afterMount: function(el, state, params, hub) {
+      var change;
+      change = function(value) {
+        return hub.emit('selected value: {value}', {
+          value: value
+        });
+      };
       return reactDOM.render(react.createElement(reactSelect, {
         name: 'select-name',
         value: 'first',

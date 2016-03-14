@@ -13,11 +13,10 @@ options = [
   valueAndLabel('third', 'third')
 ]
 
-change = () ->
-  console.log 'onchange'
-
 module.exports = widget
   afterMount: (el, state, params, hub) ->
+    change = (value) ->
+      hub.emit 'selected value: {value}', value: value
     reactDOM.render(react.createElement(reactSelect, {name: 'select-name', value:'first', options: options, onChange: change}), el)
   render: (a, b, c, d) ->
     dom '.select', ''
