@@ -1,5 +1,5 @@
 (function() {
-  var component, dom, exe, hub, odoql, relay, root, router, scene, select, selector, selectorDefaultParams, _ref;
+  var component, dom, exe, hub, odoql, relay, root, router, scene, select, selectOptions, selector, selectorDefaultParams, valueAndLabel, _ref;
 
   _ref = require('odojs'), component = _ref.component, hub = _ref.hub, dom = _ref.dom;
 
@@ -26,15 +26,27 @@
     "default": 'Shared Services'
   };
 
+  valueAndLabel = function(value, label) {
+    return {
+      value: value,
+      label: label
+    };
+  };
+
+  selectOptions = [valueAndLabel('Buildings', 'Buildings'), valueAndLabel('Shared Services', 'Shared Services'), valueAndLabel('Control Systems', 'Control Systems'), valueAndLabel('Therm Generators', 'Therm Generators'), valueAndLabel('Transformers', 'Transformers'), valueAndLabel('Transmission', 'Transmission')];
+
   router = component({
     render: function(state, params, hub) {
-      var hubForSelect;
+      var hubForSelect, selectParams;
       if (params.exampleSelectorParams == null) {
         params.exampleSelectorParams = selectorDefaultParams;
       }
+      selectParams = {
+        options: selectOptions,
+        defaultValue: 'Therm Generators'
+      };
       hubForSelect = hub["new"]();
       hubForSelect.every('selected value: {value}', function(p, cb) {
-        console.log('inside the hub every');
         console.log(p);
         return cb();
       });
@@ -50,7 +62,7 @@
               }
             }))
           ])
-        ]), dom('div.example', [select(state, params, hubForSelect)]), dom('div.example', 'need component here'), dom('div.example', 'need component here'), dom('div.example', 'need component here')
+        ]), dom('div.example', [select(state, selectParams, hubForSelect)]), dom('div.example', 'need component here'), dom('div.example', 'need component here'), dom('div.example', 'need component here')
       ]);
     }
   });

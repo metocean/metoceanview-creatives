@@ -27,12 +27,28 @@ selectorDefaultParams =
     'Transmission'
   ]
   default: 'Shared Services'
+
+valueAndLabel = (value, label) ->
+  value: value
+  label: label
+
+selectOptions = [
+  valueAndLabel('Buildings', 'Buildings')
+  valueAndLabel('Shared Services', 'Shared Services')
+  valueAndLabel('Control Systems', 'Control Systems')
+  valueAndLabel('Therm Generators', 'Therm Generators')
+  valueAndLabel('Transformers', 'Transformers')
+  valueAndLabel('Transmission', 'Transmission')
+]
+
 router = component
   render: (state, params, hub) ->
     params.exampleSelectorParams ?= selectorDefaultParams
+    selectParams =
+      options: selectOptions
+      defaultValue: 'Therm Generators'
     hubForSelect = hub.new()
     hubForSelect.every 'selected value: {value}', (p, cb) ->
-      console.log 'inside the hub every'
       console.log p
       cb()
     dom '#root.metoceanview-creatives-page.grid', [
@@ -46,7 +62,7 @@ router = component
         ]
       ]
       dom 'div.example', [
-        select state, params, hubForSelect
+        select state, selectParams, hubForSelect
       ]
       dom 'div.example', 'need component here'
       dom 'div.example', 'need component here'

@@ -1,5 +1,5 @@
 (function() {
-  var dom, options, react, reactDOM, reactSelect, valueAndLabel, widget, _ref;
+  var defaultItems, defaultValue, dom, react, reactDOM, reactSelect, valueAndLabel, widget, _ref;
 
   _ref = require('odojs'), dom = _ref.dom, widget = _ref.widget;
 
@@ -16,11 +16,15 @@
     };
   };
 
-  options = [valueAndLabel('first', 'first'), valueAndLabel('second', 'second'), valueAndLabel('third', 'third')];
+  defaultItems = [valueAndLabel('first', 'first'), valueAndLabel('second', 'second'), valueAndLabel('third', 'third')];
+
+  defaultValue = 'first';
 
   module.exports = widget({
     afterMount: function(el, state, params, hub) {
-      var change;
+      var change, items, _ref1, _ref2;
+      items = (_ref1 = params.options) != null ? _ref1 : defaultItems;
+      defaultValue = (_ref2 = params.defaultValue) != null ? _ref2 : defaultValue;
       change = function(value) {
         return hub.emit('selected value: {value}', {
           value: value
@@ -28,12 +32,12 @@
       };
       return reactDOM.render(react.createElement(reactSelect, {
         name: 'select-name',
-        value: 'first',
-        options: options,
+        value: defaultValue,
+        options: items,
         onChange: change
       }), el);
     },
-    render: function(a, b, c, d) {
+    render: function() {
       return dom('.select', '');
     }
   });
