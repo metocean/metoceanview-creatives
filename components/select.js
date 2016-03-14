@@ -18,7 +18,7 @@
 
   defaultItems = [valueAndLabel('first', 'first'), valueAndLabel('second', 'second'), valueAndLabel('third', 'third')];
 
-  defaultValue = 'first';
+  defaultValue = '';
 
   module.exports = widget({
     afterMount: function(el, state, params, hub) {

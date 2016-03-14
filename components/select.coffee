@@ -17,7 +17,7 @@ defaultItems = [
   valueAndLabel('second', 'second')
   valueAndLabel('third', 'third')
 ]
-defaultValue = 'first'
+defaultValue = ''
 
 module.exports = widget
   afterMount: (el, state, params, hub) ->

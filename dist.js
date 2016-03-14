@@ -19,7 +19,7 @@
 
   defaultItems = [valueAndLabel('first', 'first'), valueAndLabel('second', 'second'), valueAndLabel('third', 'third')];
 
-  defaultValue = 'first';
+  defaultValue = '';
 
   module.exports = widget({
     afterMount: function(el, state, params, hub) {
@@ -156,8 +156,7 @@
         params.exampleSelectorParams = selectorDefaultParams;
       }
       selectParams = {
-        items: selectOptions,
-        defaultValue: 'Therm Generators'
+        items: selectOptions
       };
       hubForSelect = hub["new"]();
       hubForSelect.every('selected value: {value}', function(p, cb) {
