@@ -6,17 +6,21 @@ ref = require('odojs'), dom = ref.dom, component = ref.component;
 module.exports = component({
   render: function(state, params, hub) {
     var containerstyle, linkstyle;
-    containerstyle = "border: 1px solid white;\nbackground-color: #D9222A;";
-    linkstyle = "display: block;\npadding: 0.3em 1.6em;\ncolor: white;";
+    containerstyle = "border: 1px solid white;\nborder-bottom: none;\nmargin-bottom: -1px;";
+    linkstyle = "border-bottom: 1px solid white;\ndisplay: block;\npadding: 0.3em 1.6em;\ncolor: white;\nbackground-color: #D9222A;";
     return dom('div', {
       attributes: {
         style: containerstyle
       }
-    }, dom('a', {
-      attributes: {
-        style: linkstyle,
-        href: 'https://helm.metoceanview.com/'
-      }
-    }, params));
+    }, params.messages.filter(function(m) {
+      return m.type === 'warning';
+    }).map(function(m) {
+      return dom('a', {
+        attributes: {
+          style: linkstyle,
+          href: 'https://helm.metoceanview.com/'
+        }
+      }, m.title);
+    }));
   }
 });
