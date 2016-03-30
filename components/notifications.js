@@ -13,7 +13,7 @@ module.exports = component({
         style: containerstyle
       }
     }, params.messages.filter(function(m) {
-      return m.type === 'warning';
+      return m.type === 'notification';
     }).map(function(m) {
       return dom('a', {
         attributes: {

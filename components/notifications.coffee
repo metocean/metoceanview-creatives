@@ -15,6 +15,6 @@ module.exports = component render: (state, params, hub) ->
     color: white;
     background-color: #D9222A;
   """
-  dom 'div', { attributes: style: containerstyle }, params.messages.filter((m) -> m.type is 'warning').map (m) ->
+  dom 'div', { attributes: style: containerstyle }, params.messages.filter((m) -> m.type is 'notification').map (m) ->
     dom 'a', { attributes: style: linkstyle, href: 'https://helm.metoceanview.com/' },
       m.title
