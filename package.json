@@ -20,9 +20,11 @@
   "dependencies": {
     "flexy-grid": "^0.3.0",
     "odojs-autocomplete": "^0.1.0",
-    "react": "0.14.7",
-    "react-dom": "0.14.7",
     "react-select": "0.9.1"
+  },
+  "peerDependencies": {
+    "react": "^0.14.7",
+    "react-dom": "^0.14.7"
   },
   "devDependencies": {
     "odo-relay": "^2.4.0",
