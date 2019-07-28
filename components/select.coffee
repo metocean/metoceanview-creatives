@@ -25,6 +25,6 @@ module.exports = widget
     defaultValue = params.defaultValue ? defaultValue
     change = (value) ->
       hub.emit 'selected value: {value}', value: value
-    reactDOM.render(react.createElement(reactSelect, {name: 'select-name', value: defaultValue, options: items, onChange: change}), el)
+    reactDOM.render(react.createElement(reactSelect.default, {name: 'select-name', value: defaultValue, options: items, onChange: change}), el)
   render: () ->
     dom '.select', ''

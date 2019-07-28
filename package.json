@@ -20,7 +20,7 @@
   "dependencies": {
     "flexy-grid": "^0.3.0",
     "odojs-autocomplete": "^0.1.0",
-    "react-select": "0.9.1"
+    "react-select": "^3.0.4"
   },
   "peerDependencies": {
     "react": "^0.14.7",

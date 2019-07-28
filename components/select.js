@@ -30,7 +30,7 @@
           value: value
         });
       };
-      return reactDOM.render(react.createElement(reactSelect, {
+      return reactDOM.render(react.createElement(reactSelect.default, {
         name: 'select-name',
         value: defaultValue,
         options: items,
